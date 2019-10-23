@@ -64,7 +64,6 @@ $ terraform apply ./plan.tfrun
 ## TODO
 
 - This is a Django/DRF app and could be incorporated into other Django projects.
-  e.g. Authentication/Authorization can be added by setting `DEFAULT_PERMISSION_CLASSES` in `settings.REST_FRAMEWORK`.
 - Different WSGI Servers config, e.g. `gunicorn`, `uWSGI` or `mod_wsgi`.
 - Migrate state between scopes (i.e. reparent `Resource`s to different `State`s)
 - Migrate state between `0.11` and `0.12`.

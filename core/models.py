@@ -1,3 +1,4 @@
+from django.contrib.auth import get_user_model
 from django.db import models
 from django.contrib.postgres.fields import ArrayField, JSONField
 
@@ -9,6 +10,7 @@ class State(models.Model):
         ]
 
     scope = models.TextField(primary_key=True)
+    owner = models.ForeignKey(get_user_model(), on_delete=models.CASCADE, null=True)
     lineage = models.UUIDField(editable=False)
     serial = models.IntegerField(editable=False)
     version = models.IntegerField(editable=False)
